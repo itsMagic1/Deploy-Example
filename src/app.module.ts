@@ -21,7 +21,7 @@ import { EjemploModule } from './ejemplo/ejemplo.module';
       inject: [ConfigService],
       useFactory: (config: ConfigService) => ({
         type: 'postgres',
-        url: config.get<string>('DATABASE_URL'),
+        url: 'postgresql://usuario:pass@localhost:5432/db',
         // host: config.get<string>('HOST'),
         // port: config.get<number>('PORTDB'),
         // username: config.get<string>('USERNAMEDB'),
